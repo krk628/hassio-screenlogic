@@ -1,0 +1,32 @@
+{
+    "name": "HASSIO Pentair Screenlogic AddON",
+    "version": "0.2",
+    "slug": "pentair_screenlogic",
+    "description": "Gets state from Screelogic interface, controls pool and spa",
+    "startup": "before",
+    "hassio_api": false,
+    "host_network": true,
+    "boot": "auto",
+    "options": {
+        "mqtt_broker":"127.0.0.1",
+        "mqtt_insecure":false,
+        "mqtt_pass":"",
+        "mqtt_port":1883,
+        "mqtt_user":"",
+        "pentair_conn":"broadcast",
+        "pentair_ip":"",
+        "pentair_system":"Pentair: xx-xx-xx",
+        "pentair_pass":"1234"
+},
+    "schema": {
+        "mqtt_broker":"str",
+        "mqtt_insecure":"bool",
+        "mqtt_pass":"str",
+        "mqtt_port":"port",
+        "mqtt_user":"str",
+        "pentair_conn":"match(broadcast|direct|remote)",
+        "pentair_ip":"str",
+        "pentair_system":"str",
+        "pentair_pass":"str"
+    }
+  }
